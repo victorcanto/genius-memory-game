@@ -92,3 +92,17 @@ yellow.onclick = () => userClick(2);
 blue.onclick = () => userClick(3);
 
 playGame();
+
+const themeBtn = document.querySelector('.theme-mode-btn') as HTMLButtonElement;
+const container = document.querySelector('.container') as HTMLElement;
+
+function handleTheme({ target }: any) {
+  container.classList.toggle('dark');
+  const themeIsLight = target.classList.contains('dark');
+
+  target.textContent = themeIsLight ? 'Light mode' : 'Dark mode';
+  target.classList.remove(themeIsLight ? 'dark' : 'light');
+  target.classList.add(themeIsLight ? 'light' : 'dark');
+}
+
+themeBtn.addEventListener('click', handleTheme);
