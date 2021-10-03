@@ -43,8 +43,8 @@ body {
   border: 1px solid #fff;
   background-color: #fff;
   border-radius: 100%;
-  width: 290px;
-  height: 290px;
+  width: 50vh;
+  height: 50vh;
 }
 
 .blue {
@@ -75,24 +75,15 @@ body {
   opacity: 0.4;
 }
 
-@media (min-width: 375px) {
-  .genius {
-    width: 320px;
-    height: 320px;
-  }
-}
-
-@media (min-width: 450px) {
-  .genius {
-    width: 360px;
-    height: 360px;
-  }
-}
-
-@media (min-width: 768px) {
-  .genius {
-    width: 700px;
-    height: 700px;
-  }
-}
-
+@media (min-height: 320px) and (orientation: landscape) {
+  .theme-mode-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+   }
+ 
+   .genius {
+     width: 90vh;
+     height: 90vh;
+   }
+} 
